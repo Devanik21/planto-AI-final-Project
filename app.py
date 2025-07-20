@@ -38,7 +38,7 @@ with st.sidebar:
     if api_key:
         try:
             genai.configure(api_key=api_key)
-            st.session_state.model = genai.GenerativeModel('gemma-2-9b-it')
+            st.session_state.model = genai.GenerativeModel('gemma-3n-e4b-it')
             st.success("✅ API Key configured!")
         except Exception as e:
             st.error(f"❌ API Error: {str(e)}")
@@ -47,7 +47,7 @@ with st.sidebar:
     
     # Technique indicators
     st.subheader("Active Techniques")
-    st.info("🧠 **Fine-tuned Model**: Using Gemma-2-9b-it")
+    st.info("🧠 **Fine-tuned Model**: Using gemma-3n-e4b-it")
     st.info("📚 **RAG**: Retrieval from conversation history")
     st.info("🔍 **Vectorized Memory**: TF-IDF similarity search")
     st.info("📝 **Text Compression**: Dynamic prompt optimization")
@@ -73,7 +73,7 @@ with st.expander("🔬 How it works", expanded=False):
     col1, col2 = st.columns(2)
     with col1:
         st.markdown("""
-        **🧠 Fine-tuned Model**: Gemma-2-9b-it optimized for instruction following
+        **🧠 Fine-tuned Model**: gemma-3n-e4b-it optimized for instruction following
         
         **📚 RAG (Retrieval Augmented Generation)**: Searches conversation history for relevant context
         
@@ -221,7 +221,7 @@ def generate_response(user_input):
         
         # Add transparency about techniques used
         technique_info = "\n\n---\n**🔬 Techniques Applied:**\n"
-        technique_info += f"• Fine-tuned Model: Gemma-2-9b-it\n"
+        technique_info += f"• Fine-tuned Model: gemma-3n-e4b-it\n"
         technique_info += f"• RAG: Retrieved {len(relevant_contexts)} relevant contexts\n"
         technique_info += f"• Memory: {len(st.session_state.vectorized_memory)} entries in vectorized memory\n"
         technique_info += f"• Compression: Context managed to fit {len(managed_messages)} messages\n"
