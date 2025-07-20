@@ -12,7 +12,7 @@ import json
 # Configure page
 st.set_page_config(
     page_title="Advanced AI Chatbot Demo",
-    page_icon="🤖",
+    page_icon="🦄",
     layout="wide"
 )
 
@@ -30,7 +30,7 @@ if "model" not in st.session_state:
 
 # Sidebar for configuration
 with st.sidebar:
-    st.title("🤖 AI Techniques Demo")
+    st.title("🦄 AI Techniques Demo")
     
     # API Key input
     api_key = st.text_input("Gemini API Key", type="password", help="Enter your Google Gemini API key")
@@ -65,7 +65,7 @@ with st.sidebar:
         st.rerun()
 
 # Main chat interface
-st.title("🤖 Advanced AI Chatbot")
+st.title("🦄 Advanced AI Chatbot")
 st.markdown("*Demonstrating: Fine-tuning, RAG, Vectorized Memory, Text Compression & Large Codebase Management*")
 
 # Technique explanation
