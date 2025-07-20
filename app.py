@@ -12,7 +12,7 @@ import json
 # Configure page
 st.set_page_config(
     page_title="Advanced AI Chatbot Demo",
-    page_icon="🦄",
+    page_icon="🤖",
     layout="wide"
 )
 
@@ -30,7 +30,7 @@ if "model" not in st.session_state:
 
 # Sidebar for configuration
 with st.sidebar:
-    st.title("🦄 AI Techniques Demo")
+    st.title("🤖 AI Techniques Demo")
     
     # API Key input
     api_key = st.text_input("Gemini API Key", type="password", help="Enter your Google Gemini API key")
@@ -47,7 +47,7 @@ with st.sidebar:
     
     # Technique indicators
     st.subheader("Active Techniques")
-    st.info("🧠 **Fine-tuned Model**: Using gemma-3n-e4b-it")
+    st.info("🧠 **Fine Tuned Model**: Using gemma-3n-e4b-it")
     st.info("📚 **RAG**: Retrieval from conversation history")
     st.info("🔍 **Vectorized Memory**: TF-IDF similarity search")
     st.info("📝 **Text Compression**: Dynamic prompt optimization")
@@ -65,7 +65,7 @@ with st.sidebar:
         st.rerun()
 
 # Main chat interface
-st.title("🦄 Advanced AI Chatbot")
+st.title("🤖 Advanced AI Chatbot")
 st.markdown("*Demonstrating: Fine-tuning, RAG, Vectorized Memory, Text Compression & Large Codebase Management*")
 
 # Technique explanation
@@ -198,7 +198,7 @@ def generate_response(user_input):
         
         # 4. Build optimized prompt
         system_prompt = f"""You are an advanced AI assistant demonstrating multiple AI techniques:
-        - Fine-tuned response generation
+        - Fine-tuned response generation using gemma-3n-e4b-it
         - RAG-based context retrieval  
         - Vectorized memory search
         - Text compression for efficiency
@@ -236,14 +236,38 @@ def generate_response(user_input):
     except Exception as e:
         return f"Error generating response: {str(e)}"
 
+# Example prompts section
+st.subheader("🎯 Demo Prompts")
+with st.expander("Try these prompts to see all techniques in action", expanded=False):
+    example_prompts = [
+        "Explain machine learning algorithms and their applications",
+        "What did we discuss about machine learning earlier? Build upon that conversation",
+        "Create a detailed technical architecture for a distributed system with microservices",
+        "Compare our previous discussions about AI techniques and suggest improvements",
+        "Write a comprehensive guide on database optimization strategies"
+    ]
+    
+    st.markdown("**Suggested conversation flow:**")
+    for i, prompt in enumerate(example_prompts, 1):
+        if st.button(f"{i}. {prompt}", key=f"example_{i}"):
+            st.session_state.example_input = prompt
+    
+    st.markdown("*Each prompt will demonstrate different aspects of the AI techniques*")
+
 # Chat interface
 for message in st.session_state.messages:
     if not message.get("compressed"):  # Don't display compressed messages
         with st.chat_message(message["role"]):
             st.markdown(message["content"])
 
-# User input
-if user_input := st.chat_input("Ask me anything..."):
+# Handle example input
+if "example_input" in st.session_state:
+    user_input = st.session_state.example_input
+    del st.session_state.example_input
+else:
+    user_input = st.chat_input("Ask me anything...")
+
+if user_input:
     # Add user message
     st.session_state.messages.append({"role": "user", "content": user_input})
     with st.chat_message("user"):
