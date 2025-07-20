@@ -6,7 +6,7 @@ A comprehensive Streamlit application demonstrating multiple AI techniques in a 
 
 ## 🎯 Overview
 
-This chatbot demonstrates **Week 3 Advanced AI Techniques** in action:
+This chatbot demonstrates ** Advanced AI Techniques** in action:
 - **Fine-Tuned Model**: Uses Gemma-2-9b-it optimized for instruction following
 - **RAG (Retrieval Augmented Generation)**: Searches conversation history for relevant context
 - **Vectorized Memory**: TF-IDF vectorization for semantic similarity matching
