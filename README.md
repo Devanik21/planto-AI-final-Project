@@ -6,8 +6,8 @@ A comprehensive Streamlit application demonstrating multiple AI techniques in a 
 
 ## 🎯 Overview
 
-This chatbot demonstrates ** Advanced AI Techniques** in action:
-- **Fine-Tuned Model**: Uses Gemma-2-9b-it optimized for instruction following
+This chatbot demonstrates **Week 3 Advanced AI Techniques** in action:
+- **Fine-Tuned Model**: Uses gemma-3n-e4b-it optimized for instruction following
 - **RAG (Retrieval Augmented Generation)**: Searches conversation history for relevant context
 - **Vectorized Memory**: TF-IDF vectorization for semantic similarity matching
 - **Text Compression**: Dynamic prompt optimization and context compression  
@@ -153,6 +153,12 @@ The application tracks:
 
 For technical issues or questions about implementation, refer to:
 - Streamlit documentation
+- Google Gemini AI documentation  
+- Scikit-learn documentation for vector operations
+
+---
+
+**Ready to present!** This demo showcases cutting-edge AI techniques in a user-friendly, transparent interface perfect for stakeholder demonstrations.
 - Google Gemini AI documentation  
 - Scikit-learn documentation for vector operations
 
