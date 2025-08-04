@@ -22,8 +22,8 @@ import pandas as pd
 
 # Configure page
 st.set_page_config(
-    page_title="🧠 Enterprise AI Assistant",
-    page_icon="🧠",
+    page_title="Multimodal AI",
+    page_icon="✨",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -197,7 +197,7 @@ memory_db = AdvancedMemoryDB()
 
 # Advanced sidebar configuration
 with st.sidebar:
-    st.title("🧠 Enterprise AI Assistant")
+    st.title("♾️ Multimodal AI")
     st.markdown("*Next-generation conversational AI with advanced techniques*")
     
     # API Configuration
@@ -275,7 +275,7 @@ with st.sidebar:
             st.session_state.show_analytics = True
 
 # Main interface
-st.title("🧠 Enterprise AI Assistant")
+st.title("🪄 Multimodal AI")
 st.markdown("*Powered by Advanced AI Techniques: Multi-modal RAG, Knowledge Graphs, Real-time Learning & More*")
 
 # Tabs for different views
@@ -614,7 +614,7 @@ def generate_advanced_response(user_input: str) -> Tuple[str, Dict[str, Any]]:
             metadata["techniques_used"].append("Adaptive User Profiling")
         
         # 6. Build system prompt
-        system_prompt = f"""You are an advanced enterprise AI assistant with cutting-edge capabilities.
+        system_prompt = f"""You are an advanced Multimodal AI with cutting-edge capabilities.
 
 ACTIVE TECHNIQUES:
 - Advanced fine-tuned language model
@@ -1138,7 +1138,7 @@ with tab4:
 st.divider()
 st.markdown("""
 ---
-### 🚀 **Enterprise AI Assistant - Advanced Features Summary**
+### 🚀 **Multimodal AI - Advanced Features Summary**
 
 **🧠 Core AI Techniques:**
 - Fine-tuned transformer models with custom parameters
