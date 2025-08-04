@@ -207,7 +207,7 @@ with st.sidebar:
         if api_key:
             try:
                 genai.configure(api_key=api_key)
-                st.session_state.model = genai.GenerativeModel('gemini-2.0-flash')
+                st.session_state.model = genai.GenerativeModel('gemma-3-27b-it')
                 st.success("✅ API Connected!")
             except Exception as e:
                 st.error(f"❌ API Error: {str(e)}")
