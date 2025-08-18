@@ -5,7 +5,7 @@
 A comprehensive Streamlit application demonstrating multiple AI techniques in a single chatbot interface, built for presentation to stakeholders.
 
 ## 🎯 Overview
-
+              
 This chatbot demonstrates **Week 3 Advanced AI Techniques** in action:
 - **Fine-Tuned Model**: Uses gemma-3n-e4b-it optimized for instruction following
 - **RAG (Retrieval Augmented Generation)**: Searches conversation history for relevant context
