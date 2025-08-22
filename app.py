@@ -217,7 +217,7 @@ api_key = st.sidebar.text_input(
 
 if api_key:
     genai.configure(api_key=api_key)
-    model = genai.GenerativeModel('gemini-pro')
+    model = genai.GenerativeModel('gemma-3-27b-it')
     st.sidebar.success("API Key configured!")
 else:
     st.sidebar.warning("Please enter your Gemini API Key")
