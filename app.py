@@ -217,7 +217,7 @@ api_key = st.sidebar.text_input(
 
 if api_key:
     genai.configure(api_key=api_key)
-    model = genai.GenerativeModel('gemma-3-27b-it')
+    model = genai.GenerativeModel('gemini-2.0-flash')
     st.sidebar.success("API Key configured!")
 else:
     st.sidebar.warning("Please enter your Gemini API Key")
@@ -237,7 +237,7 @@ st.sidebar.markdown("### 📊 Memory Stats")
 st.sidebar.metric("Stored Memories", len(st.session_state.memory.memory_store))
 
 # Main interface
-st.title("🤖 AI Coding Assistant - Final Project")
+st.title("✨ AI Coding Assistant")
 st.markdown("*Showcasing LLM deployment, RAG, vectorized memory, text-to-prompt compression, and fine-tuning strategies*")
 
 # Create tabs
@@ -305,7 +305,7 @@ with tab1:
                 )
                 
                 # Display response
-                st.markdown("### 🤖 Assistant Response:")
+                st.markdown("### 🦄 Assistant Response:")
                 st.markdown(response.text)
                 
                 # Show RAG context if used
