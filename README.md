@@ -572,9 +572,9 @@ Have an idea? We'd love to hear it! Open an issue with:
 
 ### 🌟 Star this project if you found it helpful!
 
-![Stars](https://img.shields.io/github/stars/Devanik21/ai-coding-assistant?style=social)
-![Forks](https://img.shields.io/github/forks/Devanik21/ai-coding-assistant?style=social)
-![Issues](https://img.shields.io/github/issues/Devanik21/ai-coding-assistant)
+![Stars](https://img.shields.io/github/stars/Devanik21/planto-ai-final-project?style=social)
+![Forks](https://img.shields.io/github/forks/Devanik21/planto-ai-final-project?style=social)
+![Issues](https://img.shields.io/github/issues/Devanik21/planto-ai-final-project)
 
 **Made with ❤️ and ☕ during AI Internship 2025**
 
